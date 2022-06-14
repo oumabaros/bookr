@@ -5,6 +5,7 @@ class BookAdmin(admin.ModelAdmin):
     date_hierarchy = 'publication_date'
     list_display = ('title', 'isbn')
     list_filter = ('publisher', 'publication_date')
+    search_fields=('title','isbn','publisher__name')
 
 def initialled_name(obj):
     """ obj.first_names='Jerome David', obj.last_names='Salinger'
@@ -14,6 +15,7 @@ def initialled_name(obj):
 
 class ContributorAdmin(admin.ModelAdmin):
     list_display = ('last_names', 'first_names')
+    #list_display = (initialled_name,)
     list_filter = ('last_names',)
     search_fields = ('last_names__startswith', 'first_names')
 

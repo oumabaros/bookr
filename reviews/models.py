@@ -20,8 +20,8 @@ class Book(models.Model):
     contributors=models.ManyToManyField('Contributor',through='BookContributor')
     
     def __str__(self):
-        return self.title
-
+        return "{} ({})".format(self.title,self.isbn)
+        
 class Contributor(models.Model):
     """A contributor to a book eg author,co-author,editor"""
     first_names=models.CharField(max_length=50,help_text="The contibutor's first name or names")

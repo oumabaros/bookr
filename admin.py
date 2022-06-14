@@ -2,5 +2,5 @@ from django.contrib import admin
 
 class BookrAdminSite(admin.AdminSite):
     title_header = 'Bookr Admin'
-    site_header = 'Bookr administration'
-    index_title = 'Bookr site admin'
+    site_header = 'Bookr Administration'
+    index_title = 'Bookr Site Admin'
