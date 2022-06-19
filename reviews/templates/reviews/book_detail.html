@@ -31,8 +31,12 @@
                         <br>
                         <span class="text-info">Creator: </span><span>{{ review.creator.username }}</span>
                         <br>
+                        <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="/books/{{ review.book.id }}/reviews/{{review.id}}">Edit Review</a></li>
                   </li>
             {% endfor %}
             </ul>
+            <br>
+            
       {% endif %}
+      <a class="btn btn-info btn-sm active" role="button" aria-pressed="true" href="/books/{{ book.id }}/reviews/new">New Review</a></li>
 {% endblock %}
